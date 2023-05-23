@@ -85,21 +85,8 @@ app.get('/aura-services/v1/openid/jwk', (req, res) => {
 
   const headers = req.headers;
 
-  console.log(headers);
+  console.log(headers['x-correlator']);
 
-  // Si el número es menor a 80, devolver un item aleatorio
-  // const returnValue = {
-  //   "keys": [
-  //     {
-  //       "kty": "RSA",
-  //       "kid": "8dfe2155bbfe54079ba640560ae930411e93a008",
-  //       "use": "sig",
-  //       "alg": "RS256",
-  //       "n": "4ic0du_iuWw8LJulkEf4BaryzJreE95dzV_u9e5_uZ2iR4PywmgXs-1ACSJpmAFWFgeF5YolBiyGalC_aEB_0_h4_JyWKPFW5BUaippty0YsxYQ3IW9jNxeSkHYC459eGudtldr7UYODy0Tvzh1aE0VOJvwqw5auV1jxyCOTQSx-KITbXZssk4DZ44MAJoRyMOg0JLZ2C3rwwFKP-NK3ka1mC_6BGiNEAie94SZhYT-6FcRUQ1xYDywID51JdYkt3dYbMQpyJueD9QhMGBff8clkhlqvZBAvB9w-pMhCXeLs_BBcmve1U71CeTSheyXJAjZhJgMcMBV5vtzs-5SqxQ",
-  //       "e": "AQAB"
-  //     }
-  //   ]
-  // }
   const returnValue = 11000;
   if (randomNumber < 90) {
     res.json(returnValue);
